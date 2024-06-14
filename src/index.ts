@@ -6,15 +6,12 @@ import env from './infra/module/dotenv';
 
 import database from './infra/connector/database';
 import redisClient from './infra/connector/redis';
-import telegramBot from "./infra/connector/telegram";
 
 Error.stackTraceLimit = Infinity;
 
 (async () => {
     await redisClient.connect();
     await database.initPromise;
-    if(!telegramBot) throw new Error('Telegram Bot Initialize Fail');
-    else console.log('Telegram Bot Initialized!');
 
     const port = env.HTTP_PORT;
     app.set('port', port);
