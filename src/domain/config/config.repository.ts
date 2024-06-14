@@ -17,15 +17,10 @@ const configRepository = database.source.getRepository(ConfigEntity).extend({
 
     async initConfig(configId: ConfigId) {
         try {
-            const config: ConfigValue = JSON.parse(fs.readFileSync(process.cwd() + `/src/setup/config/${configId}.json`, 'utf-8'));
+            const config: ConfigValue = JSON.parse(fs.readFileSync(process.cwd() + `/setup/config/${configId}.json`, 'utf-8'));
             return await this.save(new ConfigEntity(configId, config));
         } catch (e) {
             return null;
-        }
-    },
-
-    async initialize(){
-        async function initializeApplyConfig() {
         }
     },
 
