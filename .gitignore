@@ -231,4 +231,7 @@ fabric.properties
 !.idea/codeStyles
 !.idea/runConfigurations
 
+# docker-compose
+docker-compose.yml
+
 # End of https://www.toptal.com/developers/gitignore/api/node,webstorm+all,dotenv
