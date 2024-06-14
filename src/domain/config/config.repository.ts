@@ -23,14 +23,6 @@ const configRepository = database.source.getRepository(ConfigEntity).extend({
             return null;
         }
     },
-
-    async getApplyConfig() {
-        const _applyConfig = await this.findOne({
-            where: {
-                name: 'apply'
-            }
-        })
-    }
 });
 
 export default configRepository;
