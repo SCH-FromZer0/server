@@ -10,18 +10,35 @@ const configRepository = database.source.getRepository(ConfigEntity).extend({
                 name: configId
             }
         })
-        if(!result) result = await this.initConfig(configId);
+        if (!result) result = await this.initConfig(configId);
 
         return result;
     },
 
     async initConfig(configId: ConfigId) {
+        switch (configId) {
+            case 'apply':
+                return await this.save(new ConfigEntity(configId, {
+                        "isAppliable": false,
+                        "limitations": {
+                            "perIp": {
+                                "oneRequest": true,
+                                "oneSubmit": true
+                            }
+                        }
+                    }
+                ));
+            default:
+                return null;
+        }
+        /*
         try {
             const config: ConfigValue = JSON.parse(fs.readFileSync(process.cwd() + `/setup/config/${configId}.json`, 'utf-8'));
             return await this.save(new ConfigEntity(configId, config));
         } catch (e) {
             return null;
         }
+         */
     },
 });
 
