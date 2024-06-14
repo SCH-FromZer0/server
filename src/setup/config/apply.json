@@ -1,0 +1,9 @@
+{
+  "isAppliable": false,
+  "limitations": {
+    "perIp": {
+      "oneRequest": true,
+      "oneSubmit": true
+    }
+  }
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FromZer0 지원 완료</title>
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        .container{
+            padding-top: 2rem;
+            margin: 0;
+            margin-bottom: 2rem !important;
+            font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Nanum Gothic', Helvetica, arial, sans-serif;
+            width: 100%;
+        }
+        .content-area {
+            max-width: 680px;
+            padding: .75rem;
+            margin: 0 auto;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="container">
+<table class="content-area">
+    <thead>
+    <tr>
+        <td style="vertical-align:top; padding-bottom: 2rem">
+            <p style="font-size: 1.25rem; font-weight: 500; color: #3B82F6">FromZer0</p>
+            <h1 style="font-weight:800; font-size: 1.5rem; line-height: 2rem; margin: 0;" class="font-extrabold text-2xl">{{name}} 지원자님,<br>FromZer0 지원이 완료되었어요!</h1>
+            <p style="margin-top: .75rem; font-size: 1rem; margin-bottom: 0; color: #1e293b;">작성하신 소중한 지원서를 잘 받았어요.<br/>FromZer0를 선택하고 지원해주셔서 감사해요.</p>
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="vertical-align:top;  padding-bottom: 1rem;">
+            <div style="vertical-align:top; background-color: #f1f5f9; text-align: center; border-radius: .75rem; padding: 0.5rem 1.5rem;">
+                <p>이 메일은 지원서가 잘 접수되었음을 알려드리는 메일이에요!</p>
+                <p>작성하신 지원서는 모집 기간동안 자유롭게 수정하실 수 있으나,<br/><span style="font-weight: 600">지원하신 IP에서만</span> 수정하실 수 있어요.</p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top; padding-bottom: .5rem;">
+            <a style="background-color: #1e293b; font-size: 1rem; border-radius: .75rem; padding: .9rem; display: block; color: #f1f5f9; font-weight: 600; text-align: center; text-decoration: none;"
+               href="{{link}}">지원서 수정하기 →</a>
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top; padding-bottom: 2rem; color: #6B7280; text-align: center;">
+            <div style="margin: 1rem 0 2rem 0;">
+                <p style="margin-bottom: .5rem;">지원서 <span style="font-weight: bold">{{applicationId}}</span>에 <span style="font-weight: bold">{{submittedIp}}</span>에서 접수 완료</p>
+            </div>
+            <p style="text-transform: uppercase; color: #cbd5e1; font-weight: lighter; letter-spacing: 10px; margin: 1rem 0;">the zer0base creation</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
