@@ -1,4 +1,4 @@
-import express, {Express, Request, Response, NextFunction, RequestHandler} from 'express';
+import express, {Express, RequestHandler} from 'express';
 import bodyParser from 'body-parser';
 import logger from 'morgan';
 import cors from 'cors';
@@ -28,11 +28,6 @@ app.use(
         credentials: true,
     }),
 );
-
-app.use((req: Request, res: Response, next: NextFunction) => {
-    console.log(req.headers['X-FromZer0-Proxy-Passed']);
-    next();
-})
 
 app.use(logger('dev'));
 app.use(express.json());
