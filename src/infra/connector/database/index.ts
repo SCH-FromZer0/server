@@ -29,6 +29,8 @@ class Database {
             synchronize: true,
             useUTC: true,
         });
+
+        this.initPromise = this.source.initialize();
     }
 }
 
