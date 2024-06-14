@@ -8,7 +8,7 @@ RUN npm install -g nodemon
 RUN npm install -g typescript
 
 COPY ./ /app/
-RUN rm .env
+RUN if [ -f .env ]; then rm .env; fi
 RUN npm run clean
 RUN npm run build
 RUN npm run remove-src
