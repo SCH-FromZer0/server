@@ -78,6 +78,7 @@ async function getUserData(req: CustomRequest, res: Response, next: NextFunction
     res.send({
         name: req.user.name,
         studentId: req.user.studentId,
+        association: req.user.association,
         isInternal: req.user.isInternal,
         permission: {
             administration: req.permission.administration
