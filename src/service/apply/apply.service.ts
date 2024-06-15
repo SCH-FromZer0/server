@@ -156,13 +156,17 @@ async function requestForm(req: CustomRequest, res: Response, next: NextFunction
         })
     }
 
-    if(await sendApplication(application)) return res.json({
-        success: true,
-    });
-    else return res.status(HttpStatusCode.InternalServerError).json({
-        success: false,
-        message: 'ERR_UNKNOWN'
-    });
+    try {
+        await sendApplication(application);
+        return res.json({
+            success: true,
+        });
+    } catch (e) {
+        return res.status(HttpStatusCode.InternalServerError).json({
+            success: false,
+            message: 'ERR_UNKNOWN'
+        });
+    }
 }
 
 export {
