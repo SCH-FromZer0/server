@@ -43,6 +43,7 @@ services:
     volumes:
       - ../data/storage:/app/storage
     networks:
+      - external
       - internal
     depends_on:
       - fromzer0-database
@@ -57,6 +58,7 @@ services:
       POSTGRES_PASSWORD: ""
       TZ: 'Asia/Seoul'
     networks:
+      - external
       - internal
     volumes:
       - ../data/db:/var/lib/postgresql/data
